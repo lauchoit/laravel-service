@@ -12,24 +12,26 @@ Or add the following to your composer.json's require-dev section and `composer u
 
 ```json
 "require-dev": {
-          "jason-guru/laravel-make-repository": "^0.0.2"
+    "lauchoit/laravel-service": "dev-main",
 }
 ```
 ## Usage
-`php artisan make:repository your-repository-name`
+`php artisan make:service your-service-name`
 
 Example:
 ```
-php artisan make:repository UserRepository
+php artisan make:service User
+            or
+php artisan make:service UserService
 ```
 or
 ```
-php artisan make:repository Backend\UserRepository
+php artisan make:service User\User
+            or
+php artisan make:service User\UserService
 ```
 
-The above will create a repositories directory inside the app directory.
-
-Once the repository is generated add your model class and return it in the model function,
+This packet creates the Services folder inside the app.
 
 Example:
 
@@ -38,13 +40,12 @@ Example:
 
 namespace DummyNamespace;
 
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
-//use Your Model
+use LauchoIT\LaravelService\Service\BaseService;
 
 /**
  * Class DummyClass.
  */
-class DummyClass extends BaseRepository
+class DummyClass extends BaseService
 {
     /**
      * @return string
@@ -52,13 +53,13 @@ class DummyClass extends BaseRepository
      */
     public function model()
     {
-        //return YourModel::class
+        //return YourModel::class;
     }
 }
 
 ```
 
-<a href="https://www.buymeacoffee.com/fMy8dmHGl" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+More informations visit https://lauchoit.com
 
 
 
