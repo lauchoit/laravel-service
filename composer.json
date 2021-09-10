@@ -1,0 +1,30 @@
+{
+    "name": "lauchoit/laravel-service",
+    "description": "A simple package to create a make:service command for Laravel 7+",
+    "type": "library",
+    "require": {
+        "php": ">=7.3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jesus Laucho",
+            "email": "contacto@lauchoit.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LauchoIT\\LaravelService\\LauchoITServicesProvider"
+            ]
+        }
+    },
+
+    "autoload": {
+        "psr-4": {
+            "LauchoIT\\LaravelService\\": "src/"
+        },
+        "classmap": ["src/"]
+    }
+}

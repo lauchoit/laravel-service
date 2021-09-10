@@ -1,0 +1,20 @@
+<?php
+
+namespace DummyNamespace;
+
+use LauchoIT\LaravelService\Service\BaseService;
+
+/**
+ * Class DummyClass.
+ */
+class DummyClass extends BaseService
+{
+    /**
+     * @return string
+     *  Return the model
+     */
+    public function model()
+    {
+        //return YourModel::class;
+    }
+}
